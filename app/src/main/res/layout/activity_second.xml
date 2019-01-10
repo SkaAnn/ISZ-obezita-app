@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!--> textové polia na vkladanie údajov <-->
+        <EditText
+            android:id="@+id/Weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="* Zadajte svoju hmotnosť v kilogramoch" />
+
+        <EditText
+            android:id="@+id/Heartbeats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="* Zadajte tepovú frekvenciu v úderoch za minútu" />
+
+        <EditText
+            android:id="@+id/Systolic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="* Zadajte hodnotu svojho systolického tlaku v mmHg" />
+
+        <EditText
+            android:id="@+id/Diastolic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="* Zadajte hodnotu svojho diastolického tlaku v mmHg" />
+
+        <EditText
+            android:id="@+id/Notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Zadajte poznámky o liekoch, ktoré užívate" />
+
+    </LinearLayout>
+
+    <!--> tlačidlo, ktoré prepína odošle zadané údaje na zadaný email  <-->
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:onClick="sendForm"
+        android:text="ODOSLAŤ" />
+
+</RelativeLayout>
