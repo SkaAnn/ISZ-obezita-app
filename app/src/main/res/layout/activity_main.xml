@@ -4,56 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:clickable="true"
+    android:focusableInTouchMode="true" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <!--> textové polia na vkladanie údajov <-->
         <EditText
             android:id="@+id/Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="* Zadajte svoje meno" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:hint="Meno *" />
 
         <EditText
             android:id="@+id/Surname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Zadajte svoje priezvisko" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:hint="Priezvisko" />
 
         <EditText
             android:id="@+id/Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="* Zadajte svoju emailovú adresu" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:hint="E-mail *" />
 
         <EditText
             android:id="@+id/Age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="* Zadajte svoj vek" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:hint="Vek *" />
 
         <EditText
             android:id="@+id/Location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Zadajte svoj okres" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:hint="Okres" />
 
         <!--> radio buttons na určenie pohlavia vypĺňajúceho <-->
         <RadioGroup
             android:id="@+id/radioGroup1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:textSize="18dp"
+                android:text="Pohlavie:"
+                />
 
             <RadioButton
                 android:id="@+id/Male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:checked="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:text="Muž" />
 
             <RadioButton
@@ -61,6 +97,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:text="Žena" />
         </RadioGroup>
 
