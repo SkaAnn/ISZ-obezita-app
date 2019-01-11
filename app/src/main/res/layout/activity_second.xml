@@ -16,30 +16,49 @@
             android:id="@+id/Weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="* Zadajte svoju hmotnosť v kilogramoch" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:hint="Hmotnost [kg] *" />
 
         <EditText
             android:id="@+id/Heartbeats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="* Zadajte tepovú frekvenciu v úderoch za minútu" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:hint="Pulz *" />
 
         <EditText
             android:id="@+id/Systolic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="* Zadajte hodnotu svojho systolického tlaku v mmHg" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:hint="Systolický tlak [mmHg] *" />
 
         <EditText
             android:id="@+id/Diastolic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="* Zadajte hodnotu svojho diastolického tlaku v mmHg" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:hint="Diastolický tlak [mmHg] *" />
 
         <EditText
             android:id="@+id/Notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
             android:hint="Zadajte poznámky o liekoch, ktoré užívate" />
 
     </LinearLayout>
