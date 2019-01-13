@@ -34,10 +34,9 @@ public class MainActivity extends AppCompatActivity {
     public static Bundle AGE = new Bundle();
     public static Bundle LOCATION = new Bundle();
 
-    // todo: lol pokus omyl - naco to je ???!
     // práca s radio buttons
     private RadioGroup radioGroup;
-    //private Button btnDisplay;
+    // private Button btnDisplay;
     public String gender = "muž";
 
     @Override
@@ -45,17 +44,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         addListenerRadioButton();
-        FillEmail();            // todo: je vobec potebne ??
+        FillEmail();
     }
 
-    // todo: je vobec potebne ??
     private void FillEmail() {
         EditText emailEditText = findViewById(R.id.Email);
     }
 
     // skontroluje správnosť zadaných údajov povinných parametrov
     private Boolean IsValid(){
-        // todo komentár - na čo to je
         EditText nameEditText = findViewById(R.id.Name);
         EditText emailEditText = findViewById(R.id.Email);
         EditText ageEditText = findViewById(R.id.Age);
@@ -76,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                         "Musíte správne vyplniť údaj Meno, vyznačený hviezdičkou.",
                         Toast.LENGTH_SHORT);
                 toast1.show();
-                // todo: co spravi funkcia request focus?
+
                 nameEditText.requestFocus();
             }
             else{
@@ -146,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // overí, či má email správnu formu - vyhovuje regulárnemu výrazu
-    // todo: ci public?
     private boolean isValidEmail(String email) {
         String EMAIL_REGEX = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
         Pattern pattern = Pattern.compile(EMAIL_REGEX, Pattern.CASE_INSENSITIVE);
@@ -185,8 +181,6 @@ public class MainActivity extends AppCompatActivity {
         EditText locationEditText = findViewById(R.id.Location);
         intent.putExtra(LOCATION_KEY, locationEditText.getText().toString());
 
-        // todo: naco???  //na oklamanie static kontextu v dalsej aktivite
-        // todo: a co ked zvolim zenu???
         MainActivity.GENDER.putString("gender", "" + gender);
         MainActivity.NAME.putString("name",nameEditText.getText().toString());
         MainActivity.SURNAME.putString("surname",surnameEditText.getText().toString());
@@ -196,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // funkcia zistí, ktorý radio button je zaškrknutý
-    // todo: prepisat komentare
     private void addListenerRadioButton() {
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
         Button btnDisplay = (Button) findViewById(R.id.Female);
@@ -207,7 +200,6 @@ public class MainActivity extends AppCompatActivity {
                 int selectedId = radioGroup.getCheckedRadioButtonId();
                 // find the radiobutton by returned id
                 RadioButton radioButton = (RadioButton) findViewById(selectedId);
-                // todo: preco cislo a nie id radiobuttone?
                 if(selectedId == 2131165190)
                     gender = "žena";
                 else
@@ -215,5 +207,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }

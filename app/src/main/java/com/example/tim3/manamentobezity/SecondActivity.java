@@ -37,7 +37,6 @@ public class SecondActivity extends AppCompatActivity {
 
     // funkcia, ktorá vyplní todo: co spravi?
     private void PrefillFormular(Intent intent){
-        // todo: naco tieto 2 riadky ?
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");      //chcem dostat formatovany datum
         Calendar c = Calendar.getInstance();
 
@@ -92,7 +91,6 @@ public class SecondActivity extends AppCompatActivity {
 
     // skontroluje správnosť zadaných údajov povinných parametrov
     private Boolean IsValid(){
-        // todo komentár - na čo to je
         EditText weightEditText = findViewById(R.id.Weight);
         EditText heartbeatsEditText = findViewById(R.id.Heartbeats);
         EditText systolicEditText = findViewById(R.id.Systolic);

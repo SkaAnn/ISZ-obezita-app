@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:textSize="18dp"
-                android:text="Pohlavie:"
+                android:text="Pohlavie *"
                 />
 
             <RadioButton
@@ -90,6 +90,7 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:checked="true"
                 android:text="Muž" />
 
             <RadioButton
